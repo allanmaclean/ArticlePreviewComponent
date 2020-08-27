@@ -1,0 +1,138 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* COLORS:
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%) */
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.main-container {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 80%;
+  height: 70%;
+  border-radius: 20px;
+  background-color: white;
+  /* text-align: center; */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  border-radius: 20px 20px 0 0;
+  /* ^ is there any point doing this?? */
+  overflow: hidden;
+}
+
+.main-image {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+}
+
+.pc60-container {
+  height: 60%;
+  border-radius: 0 0 20px 20px;
+}
+
+.copy-container {
+  /* margin-top: 2rem; */
+  text-align: left;
+  margin-left: 10%;
+  width: 80%;
+  height: 70%
+}
+
+h1 {
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+  margin-top: 0;
+  padding-top: 35px;
+}
+
+p {
+  font-size: 13px;
+  color: hsl(214, 17%, 51%);
+}
+
+
+.author-and-share-container {
+  background-color: white;
+  display: flex;
+  width: 80%;
+  height: 30%;
+  margin-left: 10%;
+  border-radius: 0 0 20px 20px;
+}
+
+.avi-container {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 0 20px;
+}
+
+.michelle-avi {
+  height: 50%;
+  border-radius: 100%;
+}
+
+.author-and-date-container {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  justify-content: left;
+  align-items: center;
+}
+
+.author-and-date-copy {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+/* Some textalign: center wreaking havoc here... */
+
+h2 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  color: hsl(217, 19%, 35%);
+}
+
+h3 {
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  color: hsl(212, 23%, 69%);
+  font-weight: 500;
+
+}
+
+.icon-container {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  border-radius: 0 0 20px 0;
+  /* ^ these radii actually become redunant when we don't have a background color specified */
+  /* justify-content: right; */
+
+  align-items: center;
+}
+
+.share-icon {
+  height: 1rem;
+  margin-left: auto;
+}
