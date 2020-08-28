@@ -16,10 +16,10 @@ body {
 
 .main-container {
   position: absolute;
-  top: 15%;
-  left: 10%;
-  width: 80%;
-  height: 70%;
+  top: 10%;
+  left: 8%;
+  width: 84%;
+  height: 80%;
   border-radius: 20px;
   background-color: white;
   /* text-align: center; */
