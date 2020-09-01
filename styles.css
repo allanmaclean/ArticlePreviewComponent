@@ -1,62 +1,23 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
 /* COLORS:
 - Very Dark Grayish Blue: hsl(217, 19%, 35%)
 - Desaturated Dark Blue: hsl(214, 17%, 51%)
 - Grayish Blue: hsl(212, 23%, 69%)
 - Light Grayish Blue: hsl(210, 46%, 95%) */
 
+/* -----------
+ATTRIBUTION
+----------- */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* ----------
+ELEMENTS
+--------- */
 body {
   background-color: hsl(210, 46%, 95%);
   margin: 0;
   padding: 0;
   font-family: 'Manrope', sans-serif;
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 10%;
-  left: 8%;
-  width: 84%;
-  height: 80%;
-  border-radius: 20px;
-  background-color: white;
-  /* text-align: center; */
-}
-
-.image-container {
-  display: flex;
-  width: 100%;
-  height: 40%;
-  border-radius: 20px 20px 0 0;
-  /* ^ is there any point doing this?? */
-  overflow: hidden;
-  flex-direction: row;
-}
-
-.main-image {
-  border-radius: 20px 20px 0 0;
-  width: 100%;
-}
-
-.pc60-container {
-
-  flex-direction: row;
-  height: 60%;
-  width: 100%;
-  border-radius: 0 0 20px 20px;
-}
-
-.copy-container {
-  /* margin-top: 2rem; */
-  text-align: left;
-  margin-left: 10%;
-  width: 80%;
-  height: 70%;
-  overflow: scroll;
 }
 
 h1 {
@@ -66,62 +27,6 @@ h1 {
   margin-top: 0;
   padding-top: 35px;
 }
-
-p {
-  font-size: 13px;
-  color: hsl(214, 17%, 51%);
-}
-
-
-.author-and-share-container {
-  display: flex;
-  width: 100%;
-  height: 30%;
-  border-radius: 0 0 20px 20px;
-
-}
-
-.author-and-share-container.is-active {
-  background-color: hsl(217, 19%, 35%);
-}
-
-.avi-container {
-  display: flex;
-  width: 20%;
-  height: 100%;
-  justify-content: left;
-  align-items: center;
-  border-radius: 0 0 0 20px;
-  margin-left: 10%;
-}
-
-.author-and-share-container.is-active .avi-container {
-  display: none;
-}
-
-.michelle-avi {
-  height: 50%;
-  border-radius: 100%;
-}
-
-.author-and-date-container {
-  display: flex;
-  width: 60%;
-  height: 100%;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.author-and-date-copy {
-  padding-left: 20px;
-  line-height: 1.6;
-}
-
-.author-and-share-container.is-active .author-and-date-container {
-  display: none;
-}
-
-/* Some textalign: center wreaking havoc here... */
 
 h2 {
   font-size: 13px;
@@ -137,17 +42,118 @@ h3 {
   padding: 0;
   color: hsl(212, 23%, 69%);
   font-weight: 500;
-
 }
+
+p {
+  font-size: 13px;
+  color: hsl(214, 17%, 51%);
+}
+/* --------------------------------
+CLASSES - in order of appearance
+-------------------------------- */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  width: 84%;
+  height: 80%;
+  border-radius: 20px;
+  background-color: white;
+}
+
+/* MAIN IMAGE */
+
+.image-container {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.main-image {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+}
+
+/* MAIN CONTENT */
+
+.pc60-container {
+  height: 60%;
+  width: 100%;
+}
+
+.copy-container {
+  text-align: left;
+  margin-left: 10%;
+  width: 80%;
+  height: 70%;
+  overflow: scroll;
+}
+/* ------------------------- */
+/* CARD FOOTER SECTION */
+/* ------------------------- */
+
+.card-footer {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  border-radius: 0 0 20px 20px;
+}
+
+.card-footer.is-active {
+  background-color: hsl(217, 19%, 35%);
+  transition: background-color 0.5s;
+}
+
+/* AVATAR */
+
+.avi-container {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  justify-content: left;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.card-footer.is-active .avi-container {
+  display: none;
+}
+
+.michelle-avi {
+  height: 50%;
+  border-radius: 100%;
+}
+
+/* AUTHOR AND DATE  */
+
+.author-and-date-container {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-footer.is-active .author-and-date-container {
+  display: none;
+}
+
+.author-and-date-copy {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+/* SHARE ICON */
 
 .icon-container {
   display: flex;
   width: 20%;
   height: 100%;
-  border-radius: 0 0 20px 0;
-  /* ^ these radii actually become redunant when we don't have a background color specified */
-  /* justify-content: right; */
-
   align-items: center;
   justify-content: flex-end;
   margin-right: 10%;
@@ -161,113 +167,41 @@ h3 {
   border-radius: 100%;
 }
 
+.card-footer.is-active .icon-circle {
+  background-color: hsl(214, 17%, 51%);
+}
+
 .share-icon {
   height: 1rem;
   margin: 25%;
-  fill: white !important;
 }
 
-@media (min-width: 400px) {
-
-
-  body .main-container {
-      width: 50%;
-      height: 40%;
-      top: 30%;
-      left: 25%;
-
-
-      flex-direction: row;
-
-
-  }
-
-  body .image-container {
-
-
-      width: 40%;
-      height: 100%;
-      border-radius: 20px 0 0 20px;
-      /* ^ is there any point doing this?? */
-      overflow: hidden;
-      display: inline-block;
-
-  }
-
-  body .main-image {
-    border-radius: 20px 0 0 20px;
-    width: 420px;
-    display: inline-block;
-  }
-
-  body .pc60-container {
-    display: inline-block;
-    width: 60%;
-    height: 100%;
-    margin-left: -4px;
-    border-radius: 0 20px 20px 0;
-
-    vertical-align: top;
-  }
-
-  body .copy-container {
-    /* margin-top: 2rem; */
-    text-align: left;
-    margin-left: 10%;
-    width: 80%;
-    height: 70%;
-    overflow: scroll;
-  }
-
-
-  body .author-and-share-container {
-    width: 100%;
-    height: 30%;
-  }
-
-  body .avi-container {
-    display: flex;
-    width: 20%;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 0 0 0 20px;
-  }
-
-  body .author-and-date-container {
-    display: flex;
-    width: 60%;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  body .author-and-date-copy {
-    padding-left: 0;
-  }
-
+.share-icon-light {
+  display: none;
+  height: 1rem;
+  margin: 25%;
 }
 
-/* ACTIVE STATE CLASSES */
-
-.author-and-share-container-active {
-  background-color: hsl(217, 19%, 35%);
-  width: 100%;
-  height: 30%;
-  margin-left: 0;
-  border-radius: 0 0 20px 20px;
-}
-
-.author-and-date-container-active {
+.card-footer.is-active .share-icon {
   display: none;
 }
 
-.avi-container-active {
-  display: none;
+.card-footer.is-active .share-icon-light {
+  display:block;
 }
 
-.icon-circle-active {
-  /* background-color: hsl(214, 17%, 51%); */
+/* SOCIAL SHARE SECTION */
+
+.social-share-container {
+  display: none;
+  width: 80%;
+  margin-left: 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer.is-active .social-share-container {
+  display: flex;
 }
 
 .share-header {
@@ -281,21 +215,112 @@ h3 {
 .sized-icon {
   width: 20px;
   height: 20px;
-
 }
 
-.social-share-container {
-  display: none;
-  width: 80%;
-  margin-left: 10%;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.author-and-share-container.is-active .social-share-container {
-  display: flex;
-}
+/* --------------------
+    MEDIA QUERIES
+------------------- */
+@media (min-width: 400px) {
 
-#visible-flex {
-  display: flex;
+  body .main-container {
+    flex-direction: row;
+    width: 50%;
+    height: 40%;
+    top: 30%;
+    left: 25%;
+  }
+
+  /* MAIN IMAGE */
+
+  body .image-container {
+      width: 40%;
+      height: 100%;
+      border-radius: 20px 0 0 20px;
+  }
+
+  body .main-image {
+    border-radius: 20px 0 0 20px;
+    width: 420px;
+  }
+
+  /* MAIN CONTENT */
+
+  body .pc60-container {
+    width: 60%;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+  }
+
+
+
+
+
+  /* SOCIAL SHARE SECTION */
+
+  body .social-share-container {
+    background-color: hsl(217, 19%, 35%);
+    position: absolute;
+    height: 30px;
+    width: 240px;
+    top: 50%;
+    right: 10%;
+    transform: translate(50%, 0%);
+    border-radius: 10px;
+    padding: 10px 20px;
+  }
+
+  body .triangle {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 100%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 20px;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+  }
+
+  /* CARD FOOTER */
+
+  body .card-footer {
+    width: 100%;
+    height: 30%;
+  }
+
+  body .card-footer.is-active {
+    background-color: white;
+  }
+
+  body .avi-container {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0 0 0 20px;
+  }
+
+  body .card-footer.is-active .avi-container {
+    display: flex;
+  }
+
+  body .author-and-date-container {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  body .card-footer.is-active .author-and-date-container {
+    display: flex;
+  }
+
+  body .author-and-date-copy {
+    padding-left: 0;
+  }
+
 }
+/* ^ end media query */
